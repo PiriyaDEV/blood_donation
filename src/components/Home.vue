@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <div id="main-section" class="section">
       <div class="page-container">
         <div id="main-box">

@@ -55,6 +55,10 @@ hr {
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 button {
   outline: 0;
   cursor: pointer;

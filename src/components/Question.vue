@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div id="question" class="section">
     <div class="page-container">
       <div>
         <h1 id="title" class="center">

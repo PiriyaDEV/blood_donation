@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="impact">
     <div id="impact-section">
       <div class="gradient-red section">
         <div class="page-container">

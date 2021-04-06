@@ -137,7 +137,7 @@ export default {
 }
 
 #no-btn {
-  background-color: #f45d73;
+  background-color: #ff5f72;
   margin-left: 10px;
 }
 

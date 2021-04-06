@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div id="pludge" class="section">
     <div class="page-container">
       <div class="section">
         <div id="border">
@@ -83,8 +83,8 @@ export default {};
   width: 150px;
   margin-top:20px;
   border: none;
-  border-radius: 10px;
-  background-color: #F45D73;
+  border-radius: 14px;
+  background-color: #ff5f72;
   padding: 10px 40px;
   color: #FFFFFF;
   text-transform: uppercase;

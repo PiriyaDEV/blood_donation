@@ -9,13 +9,49 @@
 
       <!-- Button -->
       <div id="nav-btn">
-        <h1 class="nav-text">Home</h1>
+        <a
+          class="nav-text"
+          href="#home"
+          v-smooth-scroll="{
+            duration: 1000,
+            updateHistory: false,
+          }"
+          >Home</a
+        >
 
-        <h1 class="nav-text">Covid 19 Impact</h1>
+        <a
+          class="nav-text"
+          href="#impact"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -80,
+            updateHistory: false,
+          }"
+          >Covid 19 Impact</a
+        >
 
-        <h1 class="nav-text">Donating Blood</h1>
+        <a
+          class="nav-text"
+          href="#question"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -130,
+            updateHistory: false,
+          }"
+          >Donating Blood</a
+        >
 
-        <button id="pludge-btn" class="nav-text">pludge</button>
+        <button
+          id="pludge-btn"
+          class="nav-text"
+          href="#pludge"
+          v-smooth-scroll="{
+            duration: 1000,
+            updateHistory: false,
+          }"
+        >
+          pludge
+        </button>
       </div>
       <!-- Button -->
     </div>
@@ -23,6 +59,9 @@
 </template>
 
 <script>
+import Vue from "vue";
+import vueSmoothScroll from "vue2-smooth-scroll";
+Vue.use(vueSmoothScroll);
 export default {
   name: "navbar",
 };
