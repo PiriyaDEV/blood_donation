@@ -4,22 +4,27 @@
       <div class="section">
         <div id="border">
           <img id="hand" src="@/assets/hand.png" />
-          <div id="button-section">
+          <div id="button-p-section">
             <div>
               <h1 id="title">DONATED BLOOD TOGETHER</h1>
-              <div class="section">
-                <h1 class="input-text">NAME :</h1>
-                <input class="input" type="text" />
-              </div>
+              <form @submit.prevent="updateFirebase">
+                <div class="section">
+                  <h1 class="input-text-p">NAME :</h1>
+                  <input class="input-p" type="text" v-model="formData.name" />
+                </div>
 
-              <div class="section">
-                <h1 class="input-text">EMAIL :</h1>
-                <input class="input" type="text" />
-              </div>
+                <div class="section">
+                  <h1 class="input-text-p">EMAIL :</h1>
+                  <input class="input-p" type="email" v-model="formData.email" />
+                </div>
 
-              <div class="section">
-                <button id="pludge-btn" class="nav-text">pludge</button>
-              </div>
+                <div class="section">
+                  <button id="pludge-btn" class="nav-text" type="submit">
+                    pludge
+                  </button>
+                  <!-- {{ firebaseData }} -->
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -29,7 +34,17 @@
 </template>
 
 <script>
-export default {};
+// import { db } from './firebase';
+
+// const documentPath = 'form/user';
+
+export default {
+  data() {
+    return {
+      formData: {},
+    }
+  },
+};
 </script>
 
 <style scoped>
@@ -46,9 +61,10 @@ export default {};
 
 #hand {
   width: 260px;
+  height: 260px;
 }
 
-#button-section {
+#button-p-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,14 +77,14 @@ export default {};
   margin-bottom: 30px;
 }
 
-.input-text {
+.input-text-p {
   font-size: 2.25em;
   font-weight: 100;
   margin-right: 10px;
   margin-top: 20px;
 }
 
-.input {
+.input-p {
   border-radius: 10px;
   border: 1px solid #000000;
   padding: 7px 10px;
@@ -81,12 +97,12 @@ export default {};
   font-size: 3em;
   font-weight: 100;
   width: 150px;
-  margin-top:20px;
+  margin-top: 20px;
   border: none;
   border-radius: 14px;
   background-color: #ff5f72;
   padding: 10px 40px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
 }
 </style>
