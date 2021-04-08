@@ -53,12 +53,12 @@ export default {};
 }
 
 #medicine {
-  width: 200px;
+  width: 300px;
+  height: 250px;
   position: absolute;
   z-index: 3;
   left: 0px;
   bottom: 0px;
-  width: 300px;
 }
 @media screen and (max-width: 875px) {
   .text {
@@ -67,6 +67,7 @@ export default {};
 
   #medicine {
     width: 230px;
+    height: 180px;
   }
 
   #box {
@@ -77,6 +78,7 @@ export default {};
 @media screen and (max-width: 720px) {
   #medicine {
     width: 200px;
+    height: 150px;
   }
 }
 
@@ -92,6 +94,7 @@ export default {};
 
   #medicine {
     width: 190px;
+    height: 150px;
   }
 }
 @media screen and (max-width: 530px) {
@@ -105,12 +108,14 @@ export default {};
 
   #medicine {
     width: 160px;
+    height: 130px;
   }
 }
 
 @media screen and (max-width: 440px) {
   #medicine {
     width: 120px;
+    height: 90px;
     position: relative;
   }
 
