@@ -22,7 +22,7 @@
 
                 <div class="section">
                   <button id="pludge-btn" class="nav-text" type="submit">
-                    pludge
+                    pledge
                   </button>
                   <!-- {{ firebaseData }} -->
                 </div>
@@ -148,7 +148,7 @@ export default {
     width: 100px;
     height: 100px;
   }
-  
+
   .input{
     width: 150px;
   }

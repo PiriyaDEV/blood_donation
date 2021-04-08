@@ -50,7 +50,7 @@
             updateHistory: false,
           }"
         >
-          pludge
+          pledge
         </button>
       </div>
       <!-- Button -->
