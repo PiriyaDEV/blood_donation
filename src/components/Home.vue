@@ -16,16 +16,18 @@
             </h1>
 
             <div id="scoll-section">
-              <button id="scrolldown">
-                <a
-                  href="#impact"
-                  v-smooth-scroll="{
-                    duration: 1000,
-                    offset: -80,
-                    updateHistory: false,
-                  }"
-                  >Read More</a
-                ><i class="fa fa-chevron-down"></i>
+              <button
+                id="scrolldown"
+                class="nav-text select"
+                href="#impact"
+                v-smooth-scroll="{
+                  duration: 1000,
+                  offset: -80,
+                  updateHistory: false,
+                }"
+              >
+                Read More
+                <i class="fa fa-chevron-down"></i>
               </button>
             </div>
           </div>
