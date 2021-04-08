@@ -17,7 +17,15 @@
 
             <div id="scoll-section">
               <button id="scrolldown">
-                Read More<i class="fa fa-chevron-down"></i>
+                <a
+                  href="#impact"
+                  v-smooth-scroll="{
+                    duration: 1000,
+                    offset: -80,
+                    updateHistory: false,
+                  }"
+                  >Read More</a
+                ><i class="fa fa-chevron-down"></i>
               </button>
             </div>
           </div>
