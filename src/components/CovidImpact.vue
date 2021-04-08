@@ -91,7 +91,7 @@ export default {};
 }
 
 #impact-section {
-  padding-top: 40px;
+  padding-top: 5px;
   border-bottom: 15px solid #534966;
 }
 
@@ -150,5 +150,74 @@ export default {};
 #impact-space {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  #impact-text {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .impact-pic {
+    height: 94px;
+  }
+
+  .impact-title {
+    font-size: 2.5em;
+  }
+
+  .impact-descript {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #impact-space {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .block {
+    list-style: none;
+    flex: 0 0 33.333333%;
+  }
+
+  #impact-detail {
+  padding: 30px 0px 50px 0px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #impact-space {
+    justify-content: center;
+  }
+
+  .block {
+    list-style: none;
+    flex: initial;
+    margin: 0px 10px;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  #impact-text {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .block {
+    margin-top:20px;
+  }
+
+  #impact-detail {
+  padding: 30px 0px 30px 0px;
+  }
+  .impact-pic {
+    height: 120px;
+  }
+
 }
 </style>

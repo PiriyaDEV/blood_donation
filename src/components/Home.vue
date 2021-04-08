@@ -1,19 +1,28 @@
 <template>
   <div id="home">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <div id="main-section" class="section">
       <div class="page-container">
         <div id="main-box">
-          <div>
+          <div id="info-box">
             <h1 id="blood-title">BLOOD DONATION</h1>
             <h1 id="blood-subtitle">during covid-19</h1>
             <h1 id="blood-descript">
               THE NEED FOR <span style="color: #5a131a">BLOOD</span> IS ALWAYS
               THERE.
             </h1>
+
+            <div id="scoll-section">
+              <button id="scrolldown">
+                Read More<i class="fa fa-chevron-down"></i>
+              </button>
+            </div>
           </div>
 
           <div class="youtube">
-
             <iframe
               class="video-wrapper"
               src="https://www.youtube.com/embed/JurPFO0wFE8?rel=0"
@@ -22,17 +31,6 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="scroll-section">
-      <div class="page-container">
-        <div class="vert-move">
-          <h1 id="scrolldown">scroll down</h1>
-          <div class="section">
-            <img id="icon" src="@/assets/icon/icons8-chevron-down-96.png" />
           </div>
         </div>
       </div>
@@ -49,11 +47,15 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 180px 0px 250px 0px;
+  padding: 180px 0px 200px 0px;
 }
 
 #main-section {
-  background-image: url("../assets/back-red-mainpage.png");
+  background-image: url("../assets/bg-red.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center top;
@@ -91,23 +93,126 @@ export default {};
 
 #scrolldown {
   font-size: 3em;
-  color: #5e5e6d;
+  color: rgb(252, 130, 99);
   margin-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 30px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 8px 25px;
+  border-radius: 14px;
 }
 
-#scroll-section {
-  padding-top: 20px;
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#icon {
+i {
   width: 18px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #main-box {
+    /* flex-direction: column-reverse; */
+    padding: 180px 0px 50px 0px;
+  }
+
+  #blood-title {
+    font-size: 7.5em;
+  }
+
+  #blood-subtitle {
+    font-size: 5em;
+  }
+
+  #blood-descript {
+    font-size: 2em;
+  }
+
+  #scrolldown {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #main-box {
+    flex-direction: column-reverse;
+    padding: 180px 0px 20px 0px;
+  }
+
+  .video-wrapper {
+    width: 550px;
+    height: 400px;
+  }
+
+  #main-section {
+    background-image: url("../assets/bg-red-mobile.png");
+  }
+
+  #blood-title {
+    margin-top: 20px;
+  }
+
+  #info-box {
+    background: rgb(252, 130, 99);
+    background: linear-gradient(
+      90deg,
+      rgba(252, 130, 99, 1) 0%,
+      rgba(253, 85, 86, 1) 100%
+    );
+    padding: 20px;
+    /* border-radius: 20px; */
+    width: calc(100% - 40px);
+    margin-top: 20px;
+  }
+
+  #blood-subtitle,
+  #blood-descript,
+  #scrolldown,
+  #blood-title {
+    text-align: center;
+  }
+
+  #blood-title {
+    font-size: 6em;
+  }
+
+  #scoll-section {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .video-wrapper {
+    width: 350px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #main-box {
+    padding: 130px 0px 20px 0px;
+  }
+
+  #blood-title {
+    font-size: 4em;
+  }
+
+  #blood-subtitle {
+    font-size: 2.5em;
+  }
+
+  #blood-descript {
+    font-size: 2em;
+  }
+
+  #scrolldown {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .video-wrapper {
+    width: 330px;
+  }
 }
 </style>

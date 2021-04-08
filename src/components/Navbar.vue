@@ -10,7 +10,7 @@
       <!-- Button -->
       <div id="nav-btn">
         <a
-          class="nav-text"
+          class="nav-text select"
           href="#home"
           v-smooth-scroll="{
             duration: 1000,
@@ -20,7 +20,7 @@
         >
 
         <a
-          class="nav-text"
+          class="nav-text select"
           href="#impact"
           v-smooth-scroll="{
             duration: 1000,
@@ -31,7 +31,7 @@
         >
 
         <a
-          class="nav-text"
+          class="nav-text select"
           href="#question"
           v-smooth-scroll="{
             duration: 1000,
@@ -107,5 +107,16 @@ export default {
   border: none;
   padding: 8px 25px;
   border-radius: 14px;
+}
+
+.select{
+  display: default;
+}
+
+@media screen and (max-width: 760px) {
+  .select{
+    display: none;
+  }
+
 }
 </style>

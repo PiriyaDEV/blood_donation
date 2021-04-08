@@ -3,19 +3,21 @@
     <div class="page-container">
       <div class="section">
         <div id="border">
-          <img id="hand" src="@/assets/hand.png" />
-          <div id="button-p-section">
+          <div class="section">
+            <img id="hand" src="@/assets/hand.png" />
+          </div>
+          <div id="button-section">
             <div>
               <h1 id="title">DONATED BLOOD TOGETHER</h1>
               <form @submit.prevent="updateFirebase">
                 <div class="section">
-                  <h1 class="input-text-p">NAME :</h1>
-                  <input class="input-p" type="text" v-model="formData.name" />
+                  <h1 class="input-text">NAME :</h1>
+                  <input class="input" type="text" v-model="formData.name" />
                 </div>
 
                 <div class="section">
-                  <h1 class="input-text-p">EMAIL :</h1>
-                  <input class="input-p" type="email" v-model="formData.email" />
+                  <h1 class="input-text">EMAIL :</h1>
+                  <input class="input" type="email" v-model="formData.email" />
                 </div>
 
                 <div class="section">
@@ -42,7 +44,7 @@ export default {
   data() {
     return {
       formData: {},
-    }
+    };
   },
 };
 </script>
@@ -77,14 +79,14 @@ export default {
   margin-bottom: 30px;
 }
 
-.input-text-p {
+.input-text {
   font-size: 2.25em;
   font-weight: 100;
   margin-right: 10px;
   margin-top: 20px;
 }
 
-.input-p {
+.input {
   border-radius: 10px;
   border: 1px solid #000000;
   padding: 7px 10px;
@@ -104,5 +106,51 @@ export default {
   padding: 10px 40px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 900px) {
+  #hand {
+    width: 170px;
+    height: 170px;
+  }
+
+  #border {
+    display: block;
+    justify-content: center;
+    padding: 20px;
+    margin-top:0px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #title {
+    font-size: 2.5em;
+  }
+
+  .input-text {
+    font-size: 2em;
+  }
+
+  #pludge-btn {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hand {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .input{
+    width: 150px;
+  }
 }
 </style>

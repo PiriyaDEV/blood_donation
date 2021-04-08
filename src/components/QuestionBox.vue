@@ -172,4 +172,93 @@ export default {
 #girl {
   width: 290px;
 }
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #question-box {
+    height: 260px;
+    padding: 20px 20px 20px 240px;
+  }
+
+  .descript {
+    padding-left: 0px;
+    line-height: 1em;
+  }
+
+  #boy {
+    width: 190px;
+  }
+
+  #frame {
+    width: 225px;
+    bottom: -14px;
+    left: -17px;
+  }
+  #girl {
+    width: 270px;
+    bottom: -11px;
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .title {
+    font-size: 2.15em;
+  }
+
+  #question-box {
+    height: 260px;
+    padding: 20px 20px 20px 200px;
+  }
+
+  #boy {
+    width: 160px;
+    bottom: -8px;
+    left: -12px;
+  }
+
+  #frame {
+    width: 195px;
+    bottom: -14px;
+    left: -17px;
+  }
+  #girl {
+    width: 240px;
+    bottom: -11px;
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .title {
+    font-size: 2em;
+  }
+
+  #question-box {
+    height: 280px;
+    padding: 10px 10px 10px 100px;
+  }
+
+  #boy {
+    width: 100px;
+    bottom: -8px;
+    left: -12px;
+  }
+
+  #frame {
+    width: 100px;
+    bottom: -4px;
+    left: -8px;
+  }
+  #girl {
+    width: 150px;
+    bottom: -4px;
+    left: -10px;
+  }
+}
 </style>

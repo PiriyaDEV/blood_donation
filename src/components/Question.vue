@@ -3,7 +3,7 @@
     <div class="page-container">
       <div>
         <h1 id="title" class="center">
-          We need you to keep donating blood and platelets <br />
+          We need you to keep donating blood and platelets <br class="br-enter"/>
           during the pandemic
         </h1>
         <h1 id="descript" class="center">
@@ -45,4 +45,34 @@ export default {
   font-size: 2.5em;
   line-height: 1em;
 }
+
+@media screen and (max-width: 1200px) {
+  #title {
+    font-size: 3.5em;
+  }
+
+  #descript {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .br-enter{
+    display: none;
+  }
+  #title {
+    font-size: 3em;
+  }
+
+  #descript {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #title {
+    font-size: 2.5em;
+  }
+}
+
 </style>

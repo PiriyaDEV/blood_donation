@@ -14,7 +14,9 @@
               long as you are well and have no ongoing reactions to the vaccine.
             </h1>
 
-            <img id="medicine" src="@/assets/medicine-white.png" />
+            <div id="medicine-box">
+              <img id="medicine" src="@/assets/medicine.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -57,5 +59,68 @@ export default {};
   left: 0px;
   bottom: 0px;
   width: 300px;
+}
+@media screen and (max-width: 875px) {
+  .text {
+    font-size: 2em;
+  }
+
+  #medicine {
+    width: 230px;
+  }
+
+  #box {
+    padding: 35px 60px 35px 270px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #medicine {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .title {
+    font-size: 2.5em;
+    margin-top: 60px;
+  }
+
+  #box {
+    padding: 35px 60px 35px 230px;
+  }
+
+  #medicine {
+    width: 190px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  #box {
+    padding: 35px 60px 35px 200px;
+  }
+
+  #medicine {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #medicine {
+    width: 120px;
+    position: relative;
+  }
+
+  #box {
+    padding: 20px 10px 20px 10px;
+  }
+
+  #medicine-box {
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>
