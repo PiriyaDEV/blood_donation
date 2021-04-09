@@ -9,19 +9,23 @@
           <div id="button-section">
             <div>
               <h1 id="title">DONATED BLOOD TOGETHER</h1>
-              <form @submit.prevent="updateFirebase">
+              <form v-on:submit.prevent="insertToContact(email, name)">
                 <div class="section">
                   <h1 class="input-text">NAME :</h1>
-                  <input class="input" type="text" v-model="formData.name" />
+                  <input class="input" type="text" v-model="name" />
                 </div>
 
                 <div class="section">
                   <h1 class="input-text">EMAIL :</h1>
-                  <input class="input" type="email" v-model="formData.email" />
+                  <input class="input" type="email" v-model="email" />
                 </div>
 
                 <div class="section">
-                  <button id="pludge-btn" class="nav-text" type="submit">
+                  <button
+                    id="pludge-btn"
+                    class="nav-text"
+                    type="submit"
+                  >
                     pledge
                   </button>
                   <!-- {{ firebaseData }} -->
@@ -36,15 +40,53 @@
 </template>
 
 <script>
-// import { db } from './firebase';
+// import * as firebase from "firebase";
+import firebase from "firebase";
+var config = {
+  apiKey: "AIzaSyCF8cgvh9fEKuHD4A-l2pdeD3rbbp4e68Y",
+  authDomain: "cpe2-blood.firebaseapp.com",
+  databaseURL: "https://cpe2-blood-default-rtdb.firebaseio.com",
+  projectId: "cpe2-blood",
+  storageBucket: "cpe2-blood.appspot.com",
+  messagingSenderId: "256036783936",
+  appId: "1:256036783936:web:9eb9d717367b55f81e9ca5",
+};
+firebase.initializeApp(config);
+firebase.analytics();
 
-// const documentPath = 'form/user';
+var database = firebase.database();
+var contactRef = database.ref("/contacts");
 
 export default {
   data() {
     return {
-      formData: {},
+      contacts: {},
+      email: "",
+      name: "",
     };
+  },
+  mounted() {
+    contactRef.on("value", (snapshot) => {
+      this.contacts = snapshot.val();
+    });
+  },
+  methods: {
+    insertToContact(email, name) {
+      let data = {
+        email: email,
+        name: name,
+      };
+
+      if (email == '' && name == '') {
+        alert("Please Enter Infomation!");
+      }
+      else{
+        contactRef.push(data);
+        alert("Thank you for your pledge, " + this.name);
+        this.email = "";
+        this.name = "";
+      }
+    },
   },
 };
 </script>
@@ -118,7 +160,7 @@ export default {
     display: block;
     justify-content: center;
     padding: 20px;
-    margin-top:0px;
+    margin-top: 0px;
   }
 }
 
@@ -149,7 +191,7 @@ export default {
     height: 100px;
   }
 
-  .input{
+  .input {
     width: 150px;
   }
 }
