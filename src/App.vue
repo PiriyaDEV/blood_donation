@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "app"
+};
+</script>
+
 <style>
 @font-face {
   font-family: Supermarket;
@@ -55,7 +61,7 @@ hr {
   text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -63,7 +69,21 @@ a{
 button {
   outline: 0;
   cursor: pointer;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
+
+button:hover, button:focus, button:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
 
 .section {
   display: flex;
