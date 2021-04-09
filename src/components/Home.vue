@@ -154,7 +154,7 @@ i {
   }
 
   #main-section {
-    background-image: url("../assets/bg-red-mobile.png");
+    
   }
 
   #blood-title {
