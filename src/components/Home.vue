@@ -35,7 +35,7 @@
           <div class="youtube">
             <iframe
               class="video-wrapper"
-              src="https://www.youtube.com/embed/JurPFO0wFE8?rel=0"
+              src="https://www.youtube.com/embed/YHxdhI5ZrHc?rel=0"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -154,7 +154,7 @@ i {
   }
 
   #main-section {
-    
+    /* background-image: url("../assets/bg-red-mobile.png"); */
   }
 
   #blood-title {
