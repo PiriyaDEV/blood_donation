@@ -6,7 +6,12 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  methods: {
+    track () {
+      this.$ga.page('/')
+    }
+  }
 };
 </script>
 
